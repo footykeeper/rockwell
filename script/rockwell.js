@@ -11,12 +11,12 @@ function makeInputTable (action) {
   if (action === undefined) {
     for (i = 0; i < players.length; i++) {
       if (i % 3 === 0) {
-        string += '<tr class="w3-container"><td class="w3-container">' + players[i].name + '</td>';
+        string += '<tr class="w3-container"><td class="w3-container w3-center"><span>' + players[i].name + '</span><br/><select><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select></td>';
       } else if (i % 3 !== 0) {
-        string += '<td class="w3-container">' + players[i].name + '</td>';
+        string += '<td class="w3-container w3-center"><span>' + players[i].name + '</span><br/><select><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select></td>';
       }
     }
     string += '</tr>';
-    table.html(string);
+    table.append(string);
   }
 }
