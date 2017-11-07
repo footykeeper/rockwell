@@ -11,14 +11,10 @@ function makeInputTable (action) {
   if (action === undefined) {
     for (i = 0; i < players.length; i++) {
       if (i % 3 === 0) {
-        string += '<tr><td>' + players[i].name + '</td>';
+        string += '<tr class="w3-container"><td class="w3-container">' + players[i].name + '</td>';
       } else if (i % 3 !== 0) {
-        string += '<td>' + players[i].name + '</td>';
+        string += '<td class="w3-container">' + players[i].name + '</td>';
       }
-      //alert(players[i].name);
-      //else {
-        //table.append('<td>' + players[i].name + '</td>');
-      //}
     }
     string += '</tr>';
     table.html(string);
