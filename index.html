@@ -4,29 +4,19 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
   <title>Rocklin FC Point Tracker</title>
+  <style>
+.full {
+  width: 100%;
+}
+  </style>
 </head>
 <body>
-  <table id="inputTable" class="w3-card w3-gray w3-container">
-    <tr class="w3-container">
-      <td class="w3-container"><span>Demo</span><select><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option>
-        <option value="keypass">Key Pass</option>
-        <option value="shotontarget">Shot on Target</option>
-        <option value="cross">Successful Cross</option>
-        <option value="dribble">Successful Dribble</option>
-        <option value="dispossesion">Dispossesion</option>
-        <option value="own" class="w3-red">Own Goal</option>
-        <option value="save">Save</option>
-        <option value="interception">Interception</option>
-        <option value="tackle">Tackle Won</option>
-        <option value="pk" class="w3-green">Penalty Saved</option>
-        <option value="yellow" class="w3-yellow">Yellow Card</option>
-        <option value="second" class="w3-yellow">Second Yellow</option>
-        <option value="red" class="w3-red">Red Card</option>
-        <option value="aerial">Aerial Won</option>
-        <option value="clear">Effective Clearance</option>
-        </select></td>
-    </tr>
-  </table>
+  <div class="w3-container w3-gray">
+    <br/>
+    <button class="w3-button w3-light-grey" id="concede">Goal Conceded</button>
+    <button class="w3-button w3-light-grey" id="clean">Clean Sheet (select this at the end of the game)</button>
+  </div>
+  <table id="inputTable" class="w3-container w3-gray w3-container full"></table>
   <script src="/rockwell/script/rockwell.js"></script>
 </body>
 </html>
