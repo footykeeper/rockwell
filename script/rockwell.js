@@ -22,7 +22,17 @@ function makeInputTable (action) {
 }
 
 function event (type) {
-  
+  if (type === 'concede') {
+    for (i = 0; i < players.length; i++) {
+      var playerPosition = document.getElementsByClassName('position')[i].value;
+      var affectedPlayers = [];
+      if (playerPosition === 'def' || playerPosition === 'gk') {
+        players[i].points -= 2;
+      }
+    }
+  } else if (type === 'clean') {
+    
+  }
 }
 
 $('#concede').click(function () {
@@ -33,6 +43,6 @@ $('#clean').click(function () {
   event('clean');
 });
 
-$('.event').click(function () {
-  
+$('#submit').click(function () {
+  event('all');
 });
