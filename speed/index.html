@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <title>Rocklin FC Point Tracker</title>
+  <style>
+.full {
+  width: 100%;
+}
+  </style>
+</head>
+<body>
+  <img id="gold-card" src="https://footykeeper.github.io/rockwell/media/images/gold-card.png" hidden/>
+  <div class="w3-container w3-gray w3-center">
+    <br/>
+    <button class="w3-button w3-light-grey" id="concede">Goal Conceded</button>
+    <button class="w3-button w3-light-grey" id="clean">Clean Sheet (select this at the end of the game)</button>
+  </div>
+  <table id="inputTable" class="w3-container w3-gray w3-container full"></table>
+  <div class="w3-gray w3-container w3-center">
+    <button class="w3-button w3-light-grey" id="submit">Submit Events</button>
+    <button class="w3-button w3-light-grey" id="positions">Submit Positions (important)</button>
+    <br/><br/>
+  </div>
+  <img id="gold-card" src="https://footykeeper.github.io/rockwell/media/images/blank-gold-card.png" hidden/>
+  <script src="/rockwell/script/rockwell.js"></script>
+</body>
+</html>
