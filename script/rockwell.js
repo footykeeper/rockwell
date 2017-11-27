@@ -16,6 +16,11 @@ function fifaBadge (element) {
     ctx.font = "15px Arial";
     ctx.fillText(position, 2, 90);
   };
+  
+  this.clear = function () {
+    ctx.clearRect(0, 0, 156, 250);
+    ctx.drawImage(badge, 0, 0);
+  };
 }
 
 $(document).ready(function () {
@@ -61,7 +66,10 @@ function event (type) {
     
   }
   for (i = 0; i < players.length; i++) {
-    document.getElementsByClassName('points')[i].innerHTML = '(' + players[i].points + ')';
+    players[i].card.clear();
+    players[i].card.points(players[i].points);
+    players[i].card.name(players[i].name);
+    players[i].card.position(players[i].position.toUpperCase());
   }
 }
 
@@ -80,7 +88,21 @@ $('#submit').click(function () {
 $('#positions').click(function () {
   for (i = 0; i < players.length; i++) {
     var position = document.getElementsByClassName('position')[i].value;
-    players[i].position = document.getElementsByClassName('position')[i].value;
-    players[i].card.position(position.toUpperCase());
+    if (position !== 'null') {
+      players[i].card.clear();
+      players[i].card.points(players[i].points);
+      players[i].card.name(players[i].name);
+      players[i].card.position(position.toUpperCase());
+    } else {
+      players[i].card.clear();
+      players[i].position = 'sub';
+      players[i].card.position('SUB');
+      players[i].card.points(players[i].points);
+      players[i].card.name(players[i].name);
+    }
+  }
+  
+  for (i = 0; i < players.length; i++) {
+    document.getElementsByClassName('position')[i].value = 'null';
   }
 });
