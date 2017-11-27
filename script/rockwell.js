@@ -63,7 +63,14 @@ function event (type) {
       }
     }
   } else if (type === 'clean') {
-    
+    for (i = 0; i < players.length; i++) {
+      var playerPositionClean = players[i].position;
+      if (playerPositionClean === 'def') {
+        players[i].points += 6;
+      } else if (playerPositionClean === 'gk') {
+        players[i].points += 8;
+      }
+    }
   }
   for (i = 0; i < players.length; i++) {
     players[i].card.clear();
