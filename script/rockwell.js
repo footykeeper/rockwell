@@ -1,3 +1,23 @@
+function fifaBadge (element) {
+  var ctx = element.getContext('2d');
+  var badge = document.getElementById("gold-card");
+  ctx.drawImage(badge, 0, 0);
+  this.points = function (number) {
+    ctx.font = "25px Arial";
+    ctx.fillText(number, 3, 70);
+  };
+  
+  this.name = function (name) {
+    ctx.font = "15px Arial";
+    ctx.fillText(name, 35, 135);
+  };
+  
+  this.position = function (position) {
+    ctx.font = "15px Arial";
+    ctx.fillText(position, 2, 90);
+  };
+}
+
 $(document).ready(function () {
   makeInputTable();
   for (i = 0; i < players.length; i++) {
@@ -14,21 +34,25 @@ function makeInputTable (action) {
   if (action === undefined) {
     for (i = 0; i < players.length; i++) {
       if (i % 3 === 0) {
-        string += '<tr class="w3-container"><td class="w3-container w3-center"><span>' + players[i].name + '&nbsp;</span><span class="points"></span><br/><select class="event"><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select><br/><br/><select class="position"><option value="null" hidden selected>Select Position</option><option value="for">Forward</option><option value="mid">Midfielder</option><option value="def">Defender</option><option value="gk">Goalkeeper</option></select></td>';
+        string += '<tr class="w3-container"><td class="w3-container w3-center w3-white"><canvas class="fifabadge" width="156px" height="250px"></canvas><br/><select class="event"><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select><br/><br/><select class="position"><option value="null" hidden selected>Select Position</option><option value="for">Forward</option><option value="mid">Midfielder</option><option value="def">Defender</option><option value="gk">Goalkeeper</option></select></td>';
       } else if (i % 3 !== 0) {
-        string += '<td class="w3-container w3-center"><span>' + players[i].name + '&nbsp;</span><span class="points"></span><br/><select class="event"><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select><br/><br/><select class="position"><option value="null" hidden selected>Select Position</option><option value="for">Forward</option><option value="mid">Midfielder</option><option value="def">Defender</option><option value="gk">Goalkeeper</option></select></td>';
+        string += '<td class="w3-container w3-center w3-white"><canvas class="fifabadge" width="156px" height="250px"></canvas><br/><select class="event"><option value="null" hidden selected>Select Event</option><option value="goal" class="w3-green">Goal</option><option value="assist" class="w3-green">Assist</option><option value="keypass">Key Pass</option><option value="shotontarget">Shot on Target</option><option value="cross">Successful Cross</option><option value="dribble">Successful Dribble</option><option value="dispossesion">Dispossesion</option><option value="own" class="w3-red">Own Goal</option><option value="save">Save</option><option value="interception">Interception</option><option value="tackle">Tackle Won</option><option value="pk" class="w3-green">Penalty Saved</option><option value="yellow" class="w3-yellow">Yellow Card</option><option value="second" class="w3-yellow">Second Yellow</option><option value="red" class="w3-red">Red Card</option><option value="aerial">Aerial Won</option><option value="clear">Effective Clearance</option></select><br/><br/><select class="position"><option value="null" hidden selected>Select Position</option><option value="for">Forward</option><option value="mid">Midfielder</option><option value="def">Defender</option><option value="gk">Goalkeeper</option></select></td>';
       }
     }
     string += '</tr>';
     table.append(string);
+    for (i = 0; i < players.length; i++) {
+      players[i].card = new fifaBadge(document.getElementsByClassName('fifabadge')[i]);
+      players[i].card.name(players[i].name);
+      players[i].card.points(0);
+    }
   }
 }
 
 function event (type) {
   if (type === 'concede') {
     for (i = 0; i < players.length; i++) {
-      var playerPosition = document.getElementsByClassName('position')[i].value;
-      var affectedPlayers = [];
+      var playerPosition = players[i].position;
       if (playerPosition === 'def' || playerPosition === 'gk') {
         players[i].points -= 2;
       }
@@ -51,4 +75,12 @@ $('#clean').click(function () {
 
 $('#submit').click(function () {
   event('all');
+});
+
+$('#positions').click(function () {
+  for (i = 0; i < players.length; i++) {
+    var position = document.getElementsByClassName('position')[i].value;
+    players[i].position = document.getElementsByClassName('position')[i].value;
+    players[i].card.position(position.toUpperCase());
+  }
 });
