@@ -69,7 +69,7 @@ function event (type) {
     players[i].card.clear();
     players[i].card.points(players[i].points);
     players[i].card.name(players[i].name);
-    players[i].card.position(players[i].position.toUpperCase());
+    players[i].card.position(String(players[i].position).toUpperCase());
   }
 }
 
@@ -89,6 +89,7 @@ $('#positions').click(function () {
   for (i = 0; i < players.length; i++) {
     var position = document.getElementsByClassName('position')[i].value;
     if (position !== 'null') {
+      players[i].position = position;
       players[i].card.clear();
       players[i].card.points(players[i].points);
       players[i].card.name(players[i].name);
