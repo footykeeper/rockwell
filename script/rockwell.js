@@ -97,7 +97,33 @@ function event (type) {
             players[i].points += 6;
           }
         } else if (eventAll === 'shotontarget') {
-          
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 2;
+          }
+        } else if (eventAll === 'cross' || eventAll === 'dribble') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 1;
+          }
+        } else if (eventAll === 'dispossession') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points -= 0.5;
+          }
+        } else if (eventAll === 'own') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points -= 9;
+          }
+        } else if (eventAll === 'save') {
+          if (playerPositionAll === 'gk') {
+            players[i].points += 2;
+          }
+        } else if (eventAll === 'interception' || eventAll === 'tackle') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 1;
+          }
+        } else if (eventAll === 'pk') {
+          if (playerPositionAll === 'gk') {
+            players[i].points += 8;
+          }
         }
       }
     }
