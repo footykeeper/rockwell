@@ -71,7 +71,38 @@ function event (type) {
         players[i].points += 8;
       }
     }
+  } else if (type === 'all') {
+    for (i = 0; i < players.length; i++) {
+      var playerPositionAll = players[i].position;
+      var eventAll = document.getElementsByClassName('event')[i].value;
+      if (eventAll !== 'null') {
+        if (eventAll === 'goal') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid') {
+            players[i].points += 9;
+          } else if (playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 10;
+          }
+        } else if (eventAll === 'assist') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid') {
+            players[i].points += 6;
+          } else if (playerPositionAll === 'def') {
+            players[i].points += 8;
+          } else if (playerPositionAll === 'gk') {
+            players[i].points += 9;
+          }
+        } else if (eventAll === 'keypass') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def') {
+            players[i].points += 2;
+          } else if (playerPositionAll === 'gk') {
+            players[i].points += 6;
+          }
+        } else if (eventAll === 'shotontarget') {
+          
+        }
+      }
+    }
   }
+  
   for (i = 0; i < players.length; i++) {
     players[i].card.clear();
     players[i].card.points(players[i].points);
