@@ -124,6 +124,28 @@ function event (type) {
           if (playerPositionAll === 'gk') {
             players[i].points += 8;
           }
+        } else if (eventAll === 'yellow') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points -= 3;
+          }
+        } else if (eventAll === 'second') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points -= 4;
+          }
+        } else if (eventAll === 'red') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points -= 7;
+          }
+        } else if (eventAll === 'aerial') {
+          if (playerPositionAll === 'for' || playerPositionAll === 'mid') {
+            players[i].points += 0.5;
+          } else if (playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 1;
+          }
+        } else if (eventAll === 'clear') {
+          if (playerPositionAll === 'def' || playerPositionAll === 'gk') {
+            players[i].points += 0.25;
+          }
         }
       }
     }
