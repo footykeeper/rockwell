@@ -1,3 +1,4 @@
+
 function fifaBadge (element) {
   var ctx = element.getContext('2d');
   var badge = document.getElementById("gold-card");
@@ -152,6 +153,7 @@ function event (type) {
   }
   
   for (i = 0; i < players.length; i++) {
+    document.getElementsByClassName('event')[i].value = 'null';
     players[i].card.clear();
     players[i].card.points(players[i].points);
     players[i].card.name(players[i].name);
