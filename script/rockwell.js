@@ -1,4 +1,3 @@
-
 function fifaBadge (element) {
   var ctx = element.getContext('2d');
   var badge = document.getElementById("gold-card");
