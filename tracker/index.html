@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Soccer/Football Player Stat Tracker">
+  <meta name="keywords" content="soccer,football,point,points,tracker,https,free,online">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <title>Rocklin FC Point Tracker</title>
+  <style>
+    .full {width: 100%;}
+  </style>
+</head>
+<body>
+  <div id="pre">
+    <div class="w3-container">
+      <p>Enter your roster here:</p>
+      <input type="text" id="rosterInput" placeholder="Roster"/>
+      <br/><br/>
+      <button class="w3-button w3-blue" id="ready">Submit</button>
+      <hr/>
+      <p>Don't have a roster? Get one <a target="_blank" href="/rockwell/rosters/">here</a>!</p>
+    </div>
+  </div>
+  <div id="main" hidden>
+    <img id="gold-card" src="https://footykeeper.github.io/rockwell/media/images/gold-card.png" hidden/>
+    <div class="w3-container w3-gray w3-center">
+      <br/>
+      <button class="w3-button w3-light-grey" id="concede">Goal Conceded</button>
+      <button class="w3-button w3-light-grey" id="clean">Clean Sheet (select this at the end of the game)</button>
+    </div>
+    <table id="inputTable" class="w3-container w3-gray w3-container full"></table>
+    <div class="w3-gray w3-container w3-center">
+      <button class="w3-button w3-light-grey" id="submit">Submit Events</button>
+      <button class="w3-button w3-light-grey" id="positions">Submit Positions (important)</button>
+      <br/><br/>
+    </div>
+  </div>
+  <script src="/rockwell/script/rockwell.min.js"></script>
+</body>
+</html>
