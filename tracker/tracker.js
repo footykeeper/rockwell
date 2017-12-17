@@ -1,10 +1,3 @@
-/*$('#oof').click(function () {
-  var string = $('#input').val();
-  var oof = JSON.parse(string);
-  
-  alert(oof[0].name);
-});*/
-
 var players = '';
 
 function fifaBadge (element) {
@@ -39,6 +32,8 @@ $('#ready').click(function () {
   for (i = 0; i < players.length; i++) {
     players[i].position = 'SUB';
   }
+  $('#pre').hide();
+  $('#main').show();
 });
 
 function makeInputTable (action) {
