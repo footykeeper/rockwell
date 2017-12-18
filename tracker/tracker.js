@@ -1,3 +1,5 @@
+var players = '';
+
 function fifaBadge (element) {
   var ctx = element.getContext('2d');
   var badge = document.getElementById("gold-card");
@@ -23,14 +25,16 @@ function fifaBadge (element) {
   };
 }
 
-$(document).ready(function () {
+$('#ready').click(function () {
+  var rawRoster = $('#rosterInput').val();
+  players = JSON.parse(rawRoster);
   makeInputTable();
   for (i = 0; i < players.length; i++) {
     players[i].position = 'SUB';
   }
+  $('#pre').hide();
+  $('#main').show();
 });
-
-var players = [{"name":"Kavin","points":0},{"name":"Luis","points":0},{"name":"Charles","points":0},{"name":"Riley","points":0},{"name":"Collin","points":0},{"name":"Jordan Fong","points":0},{"name":"Daniel","points":0},{"name":"Alex","points":0},{"name":"Jordan Kuzyanov","points":0},{"name":"Curtis","points":0},{"name":"James","points":0},{"name":"Wesley","points":0},{"name":"Holden","points":0},{"name":"Sebastian","points":0},{"name":"Adler","points":0},{"name":"Joshua","points":0},{"name":"Espen","points":0},{"name":"Nathan","points":0}];
 
 function makeInputTable (action) {
   var table = $('#inputTable');
