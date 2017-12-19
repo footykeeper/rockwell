@@ -238,3 +238,7 @@ $('#positions').click(function () {
     }
   }
 });
+
+$('#table').click(function () {
+  
+});
