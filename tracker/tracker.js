@@ -259,6 +259,7 @@ $('#print').click(function () {
   $('#main').hide();
   $('#fin').hide();
   $('#printArea').show();
+  print();
 });
 
 $('#hidePrint').click(function () {
