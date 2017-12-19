@@ -22,7 +22,7 @@
       <p>Don't have a roster? Get one <a target="_blank" href="/rockwell/rosters/">here</a>!</p>
     </div>
   </div>
-  <div id="main" hidden>
+  <div id="main">
     <img id="gold-card" src="https://footykeeper.github.io/rockwell/media/images/gold-card.png" hidden/>
     <div class="w3-container w3-gray w3-center">
       <br/>
@@ -34,7 +34,39 @@
       <button class="w3-button w3-light-grey" id="submit">Submit Events</button>
       <button class="w3-button w3-light-grey" id="positions">Submit Positions (important)</button>
       <br/><br/>
+      <button class="w3-light-grey w3-button" id="table">View Complete Stats</button>
+      <br/><br/>
     </div>
+  </div>
+  <div id="fin">
+    
+    <table class="w3-table w3-striped w3-hoverable">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Points</th>
+          <th>Goals</th>
+          <th>Assists</th>
+          <th>Shots on Target</th>
+          <th>Successful Open Play Crosses</th>
+          <th>Successful Dribbles</th>
+          <th>Dispossessed</th>
+          <th>Own Goals</th>
+          <th>Clean Sheets</th>
+          <th>Saves</th>
+          <th>Interceptions</th>
+          <th>Tackles Won</th>
+          <th>Goals Conceded</th>
+          <th>Penalties Saved</th>
+          <th>Yellow Card</th>
+          <th>Red Cards</th>
+          <th>Aerials Won</th>
+          <th>Effective Clearance</th>
+        </tr>
+      </thead>
+      <tbody id="stats">
+      </tbody>
+    </table>
   </div>
   <script src="tracker.min.js"></script>
 </body>
