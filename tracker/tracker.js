@@ -250,3 +250,18 @@ $('#table').click(function () {
 $('#hide').click(function () {
   $('#fin').hide();
 });
+
+$('#print').click(function () {
+  $('#printTable').empty();
+  for (i = 0; i < players.length; i++) {
+    $('#printTable').append('<tr><td>' + players[i].name + '</td><td>' + players[i].points + '</td><td>' + players[i].goals + '</td><td>' + players[i].assists + '</td><td>' + players[i].keyPasses + '</td><td>' + players[i].shots + '</td><td>' + players[i].crosses + '</td><td>' + players[i].dribbles + '</td><td>' + players[i].dispossesions + '</td><td>' + players[i].ownGoals + '</td><td>' + players[i].cleanSheets + '</td><td>' + players[i].saves + '</td><td>' + players[i].interceptions + '</td><td>' + players[i].tackles + '</td><td>' + players[i].conceded + '</td><td>' + players[i].penaltiesSaved + '</td><td>' + players[i].yellows + '</td><td>' + players[i].reds + '</td><td>' + players[i].aerials + '</td><td>' + players[i].clearances + '</td></tr>');
+  }
+  $('#main').hide();
+  $('#fin').hide();
+  $('#printArea').show();
+});
+
+$('#hidePrint').click(function () {
+  $('#main').show();
+  $('#printArea').hide();
+});
