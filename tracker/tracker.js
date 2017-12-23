@@ -194,7 +194,7 @@ function event (type) {
             players[i].points += 0.25;
           }
           players[i].clearances++;
-        } else if (eventAll === '') {
+        } else if (eventAll === 'dispossesion') {
           if (playerPositionAll === 'for' || playerPositionAll === 'mid' || playerPositionAll === 'def' || playerPositionAll === 'gk') {
             players[i].points -= 0.5;
           }
