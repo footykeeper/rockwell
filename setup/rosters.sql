@@ -1,0 +1,6 @@
+CREATE TABLE rosters (
+    roster_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    creator_id VARCHAR(50) NOT NULL,
+    roster_string VARCHAR(1000) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
