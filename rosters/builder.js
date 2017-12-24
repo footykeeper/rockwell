@@ -26,6 +26,8 @@ $('#playerAdd').click(function () {
 });
 
 $('#create').click(function () {
+  var fin = createRoster();
   $('#final').show();
-  $('#display').text(createRoster());
+  $('#display').text(fin);
+  $('#string').val(fin);
 });
