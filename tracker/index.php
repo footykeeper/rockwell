@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once 'config.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +18,21 @@
   <div id="pre">
     <div class="w3-container">
       <p>Enter your roster here:</p>
-      <input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>
+<?php
+$sql = "SELECT roster_string FROM rosters WHERE ";
+$result = $link->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    echo '<select class="w3-input" id="rosterInput">';
+    while($row = $result->fetch_assoc()) {
+        echo '<option value="' . $row["roster_string"] . '"/>;
+    }
+    echo '</select>';
+} else {
+    echo '<input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>';
+}  
+?>
       <br/><br/>
       <button class="w3-button w3-blue" id="ready">Submit</button>
       <hr/>
