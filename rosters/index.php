@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once 'config.php';
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +27,10 @@
   <div id="final" hidden>
     <p>Your Roster:</p>
     <p id="display"></p>
+    <input id="string" name="data"/>
   </div>
-  <script src="builder.min.js"></script>
+<?php
+require_once 'builder.php';
+?>
 </body>
 </html>
