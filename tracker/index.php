@@ -19,14 +19,14 @@ require_once 'config.php';
     <div class="w3-container">
       <p>Enter your roster here:</p>
 <?php
-$sql = "SELECT roster_string FROM rosters WHERE ";
+$sql = "SELECT roster_string FROM rosters WHERE creator_name = " . $username;
 $result = $link->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     echo '<select class="w3-input" id="rosterInput">';
     while($row = $result->fetch_assoc()) {
-        echo '<option value="' . $row["roster_string"] . '"/>;
+echo '<option value="' . $row["roster_string"] . '"/>';
     }
     echo '</select>';
 } else {
