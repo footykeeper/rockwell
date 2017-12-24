@@ -13,17 +13,19 @@ $username = $_SESSION['username'];
 </head>
 <body class="w3-container">
   <br/>
-  <div id="inputs">
-    <input type="text" placeholder="Player Name" class="name"/><br/><br/>
-    <input type="text" placeholder="Player Name" class="name"/><br/><br/>
-    <input type="text" placeholder="Player Name" class="name"/><br/><br/>
-    <input type="text" placeholder="Player Name" class="name"/><br/><br/>
-    <input type="text" placeholder="Player Name" class="name"/>
-  </div>
-  <hr/>
-  <button class="w3-button w3-blue" id="playerAdd">Add Player</button>
-  <br/><br/>
-  <button class="w3-button w3-blue" id="create">Create Roster</button>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+    <div id="inputs">
+      <input type="text" placeholder="Player Name" class="name"/><br/><br/>
+      <input type="text" placeholder="Player Name" class="name"/><br/><br/>
+      <input type="text" placeholder="Player Name" class="name"/><br/><br/>
+      <input type="text" placeholder="Player Name" class="name"/><br/><br/>
+      <input type="text" placeholder="Player Name" class="name"/>
+    </div>
+    <hr/>
+    <button class="w3-button w3-blue" id="playerAdd">Add Player</button>
+    <br/><br/>
+    <input type="submit" class="w3-button w3-blue" id="create"/>
+  </form>
   <div id="final" hidden>
     <p>Your Roster:</p>
     <p id="display"></p>
