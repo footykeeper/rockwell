@@ -32,7 +32,7 @@ $username = $_SESSION['username'];
     <input id="string" name="data"/>
   </div>
 <?php
-require_once 'builder.php';
+  require_once 'builder.php';
 ?>
 </body>
 </html>
