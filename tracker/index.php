@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once '../config.php';
 $username = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
