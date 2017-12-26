@@ -3,5 +3,5 @@ CREATE TABLE games (
     user_id INT NOT NULL,
     roster_id INT NOT NULL,
     game_stats VARCHAR(7500) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
