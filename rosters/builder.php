@@ -1,6 +1,6 @@
 <?php
 
-    echo 'function addPlayer(){$("#inputs").append(\'<br/><br/><input type="text" placeholder="Player Name" class="name"/>\')}function createRoster(){var e,a=document.getElementsByClassName("name"),t="[{";for(e=0;e<a.length;e++)t+=0===e?\'"name":"\'+a[e].value+\'","points":0}\':\',{"name":"\'+a[e].value+\'","points":0}\';return t+="]"}$("#playerAdd").click(function(){addPlayer()}),$("#create").click(function(){var e=createRoster();$("#final").show(),$("#display").text(e),$("#string").val(e)});';
+    echo file_get_contents('builder.min.js');
 
     function secure_input ($data) {
         $data = trim($data);
