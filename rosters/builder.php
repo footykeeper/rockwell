@@ -14,7 +14,7 @@
             // Do nothing
         } else {
             // The user is signed in; do cool stuff
-            $sql = 'INSERT INTO rosters (creator_name, roster_string) VALUES ("' . $username . '", "' . $string . '")';
+            $sql = 'INSERT INTO rosters (creator_name, roster_string) VALUES ("' . $username . '", "' . $string . '");';
             if ($link->query($sql) === TRUE) {
                 echo "<br/><br/><div class='w3-green w3-container'><p>(alpha phase) Roster saved to your account, " . $username . "!</p></div>";
             }
