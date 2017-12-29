@@ -1,7 +1,6 @@
 function addPlayer () {
-  var lineBreak = '<br/><br/>';
-  var playerInput = '<input type="text" placeholder="Player Name" class="name"/>';
-  $('#inputs').append(lineBreak + playerInput);
+  var playerInput = '<br/><br/><input type="text" placeholder="Player Name" class="name"/>';
+  $('#inputs').append(playerInput);
 }
 
 function createRoster () {
@@ -30,4 +29,5 @@ $('#create').click(function () {
   $('#final').show();
   $('#display').text(fin);
   $('#string').val(fin);
+  $('#sendRoster').click();
 });
