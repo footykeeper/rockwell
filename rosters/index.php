@@ -24,7 +24,7 @@ $username = $_SESSION['username'];
     <hr/>
     <input type="submit" id="sendRoster" hidden/>
   </form>
-  <button class="w3-button w3-blue">Create Roster</button>
+  <button class="w3-button w3-blue" id="create">Create Roster</button>
   <br/><br/>
   <button class="w3-button w3-blue" id="playerAdd">Add Player</button>
   <div id="final" hidden>
