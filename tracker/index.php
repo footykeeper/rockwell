@@ -21,7 +21,7 @@ $username = $_SESSION['username'];
       <p>Enter your roster here:</p>
 <?php
     if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
-        echo '<input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>'    
+        echo '<input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>';
     } else {
         $sql = "SELECT roster_string FROM rosters WHERE creator_name = " . $username;
         $result = $link->query($sql);
