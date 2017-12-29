@@ -22,10 +22,10 @@ $username = $_SESSION['username'];
       <input type="text" placeholder="Player Name" class="name"/>
     </div>
     <hr/>
-    <button class="w3-button w3-blue" id="playerAdd">Add Player</button>
-    <br/><br/>
-    <input type="submit" class="w3-button w3-blue" id="create"/>
+    <button class="w3-button w3-blue">Create Roster</button>
+    <input type="submit" id="sendRoster" hidden/>
   </form>
+  <button class="w3-button w3-blue" id="playerAdd">Add Player</button>
   <div id="final" hidden>
     <p>Your Roster:</p>
     <p id="display"></p>
