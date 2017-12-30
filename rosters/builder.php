@@ -1,6 +1,4 @@
 <?php
-    echo '<script>' . file_get_contents('builder.min.js') . '</script>';
-
     function secure_input ($data) {
         $data = trim($data);
         $data = stripslashes($data);
