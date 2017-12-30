@@ -2,6 +2,7 @@
 session_start();
 require_once '../config.php';
 $username = $_SESSION['username'];
+require_once 'builder.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,8 +33,6 @@ $username = $_SESSION['username'];
     <p id="display"></p>
     <input id="string" name="data"/>
   </div>
-<?php
-  require_once 'builder.php';
-?>
+  <script src="builder.min.js"></script>
 </body>
 </html>
