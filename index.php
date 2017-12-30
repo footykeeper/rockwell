@@ -8,7 +8,7 @@ $username = $_SESSION['username'];
   <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
   <style>
     body {
-      background-image: url('media/images/footykeeper-screenshot.png');
+      /*background-image: url('media/images/footykeeper-screenshot.png');*/
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
