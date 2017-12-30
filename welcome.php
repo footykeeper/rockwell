@@ -15,6 +15,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
