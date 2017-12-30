@@ -20,8 +20,11 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     </style>
 </head>
 <body>
+    <?php
+    require_once 'navigation.php';
+    ?>
     <div class="page-header">
-        <h1>Hi, <b><?php echo $_SESSION['username']; ?></b>. Welcome to our site.</h1>
+        <h1>Hi, <b><?php echo $_SESSION['username']; ?></b>. Welcome to Footykeeper.</h1>
     </div>
     <p><a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a></p>
 </body>
