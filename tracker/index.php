@@ -16,6 +16,9 @@ $username = $_SESSION['username'];
   <style>.full {width: 100%;}</style>
 </head>
 <body>
+  <?php
+  require_once '../navigation.php';
+  ?>
   <div id="pre">
     <div class="w3-container">
       <p>Enter your roster here:</p>
