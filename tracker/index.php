@@ -32,8 +32,9 @@ $username = $_SESSION['username'];
         if ($result->num_rows > 0) {
             // output data of each row
             echo '<select class="w3-input" id="rosterInput">';
+            echo '<option value=\'[{"name":"refresh the page please"},"points":0]\' hidden selected>Select a Roster</option>';
             while($row = $result->fetch_assoc()) {
-        echo '<option value="' . $row["roster_string"] . '"/>';
+                echo '<option value="' . $row["roster_string"] . '">' . $row["roster_string"] . '</option>';
             }
             echo '</select>';
         } else {
