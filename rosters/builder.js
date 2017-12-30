@@ -12,7 +12,7 @@ function createRoster () {
   
   for (i = 0; i < inputs.length; i++) {
     build = {};
-    build.name = inputs[i];
+    build.name = inputs[i].value;
     build.points = 0;
     roster.push(build);
   }
