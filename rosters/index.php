@@ -21,6 +21,7 @@ require_once 'builder.php';
       <input type="text" placeholder="Player Name" class="name"/><br/><br/>
       <input type="text" placeholder="Player Name" class="name"/><br/><br/>
       <input type="text" placeholder="Player Name" class="name"/>
+      <input id="string" name="data" hidden/>
     </div>
     <hr/>
     <input type="submit" id="sendRoster" hidden/>
@@ -31,7 +32,6 @@ require_once 'builder.php';
   <div id="final" hidden>
     <p>Your Roster:</p>
     <p id="display"></p>
-    <input id="string" name="data"/>
   </div>
   <script src="builder.min.js"></script>
 </body>
