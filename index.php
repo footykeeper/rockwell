@@ -1,10 +1,14 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
   <style>
     body {
-      background-image: url('media/images/footykeeper-screenshot.png');
+      /*background-image: url('media/images/footykeeper-screenshot.png');*/
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -35,11 +39,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="w3-bar w3-large w3-blue navbar">
-    <a href=""><div class="w3-button">Home</div></a>
-    <a href="tracker/"><div class="w3-button">Tracker</div></a>
-    <a href="rosters/"><div class="w3-button">Roster Maker</div></a>
-  </div>
+  <?php
+  require_once 'navigation.php';
+  ?>
   <div class="spacer">
     <p class="centered w3-jumbo">Recording Stats Made Easy</p>
   </div>

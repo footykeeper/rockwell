@@ -1,0 +1,7 @@
+CREATE TABLE games (
+    game_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    roster_id INT NOT NULL,
+    game_stats VARCHAR(7500) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
