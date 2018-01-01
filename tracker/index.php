@@ -99,7 +99,6 @@ $username = $_SESSION['username'];
 ?>
       if (rosterOptions !== null) {
         var currentRoster = {};
-        var currentString = '';
         var i;
         for (i = 0; i < rosterOptions.length; i++) {
           currentRoster = rosterOptions[i];
