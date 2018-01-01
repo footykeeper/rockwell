@@ -19,6 +19,8 @@ require_once 'builder.php';
   <div class="w3-container">
     <br/>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+      <input type="text" class="w3-input" placeholder="Team Name" id="teamName"/>
+      <br/>
       <div id="inputs">
         <input type="text" placeholder="Player Name" class="name"/><br/><br/>
         <input type="text" placeholder="Player Name" class="name"/><br/><br/>
