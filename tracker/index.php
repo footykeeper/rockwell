@@ -81,17 +81,18 @@ $username = $_SESSION['username'];
         $result = $link->query($sql);
         if ($result->num_rows > 0) {
             $i = 0;
+            echo '[';
             while($row = $result->fetch_assoc()) {
-                echo '[';
-                echo '<option value="' . $row["roster_string"] . '">' . $row["roster_string"] . '</option>';
                 if ($i === 0) {
                     echo $row["roster_string"];
                 } else {
                     echo ',' . $row["roster_string"];
                 }
+                $i += 1;
             }
+            echo '];';
         } else {
-            
+            echo 'null;';
         }  
     }
 ?>
