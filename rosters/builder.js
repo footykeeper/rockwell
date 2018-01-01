@@ -8,6 +8,7 @@ function createRoster () {
   var i;
   var roster = [];
   var build = {};
+  var entireRoster = {};
   var result = '';
   
   for (i = 0; i < inputs.length; i++) {
@@ -17,7 +18,10 @@ function createRoster () {
     roster.push(build);
   }
   
-  result = JSON.stringify(roster);
+  entireRoster.teamName = $('#teamName').val();
+  entireRoster.playerRoster = roster;
+  
+  result = JSON.stringify(entireRoster);
   return result;
 }
 
