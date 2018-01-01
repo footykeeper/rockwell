@@ -27,7 +27,16 @@ function fifaBadge (element) {
 
 $('#ready').click(function () {
   var rawRoster = $('#rosterInput').val();
-  players = JSON.parse(rawRoster);
+  if (rawRoster.teamName !== undefined) {
+    (function () {
+      var fullRoster = JSON.parse(rawRoster);
+      var narrowRoster = fullRoster.playerRoster;
+      players = narrowRoster;
+    })();
+  } else {
+    players = JSON.parse(rawRoster);
+  }
+  
   makeInputTable();
   for (i = 0; i < players.length; i++) {
     players[i].position = 'SUB';
