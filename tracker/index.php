@@ -73,6 +73,7 @@ $username = $_SESSION['username'];
   </div>
   <script src="tracker.min.js"></script>
   <script>
+    $(document).ready(function () {
     var rosterOptions = <?php
     if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
       // Set roster options to null; the user is not logged in
@@ -96,6 +97,20 @@ $username = $_SESSION['username'];
         }  
     }
 ?>
+      if (rosterOptions !== null) {
+        var currentRoster = {};
+        var currentString = '';
+        var i;
+        for (i = 0; i < rosterOptions.length; i++) {
+          currentRoster = rosterOptions[i];
+          if (currentRoster.teamName !== undefined) {
+            $('#rosterInput').append('<option value=\'' + currentRoster.playerRoster + '\'>' + currentRoster.teamName + '</option>');
+          } else {
+            $('#rosterInput').append('<option value=\'' + currentRoster + '\'>' + currentRoster + '</option>');
+          }
+        }
+      }
+    });
   </script>
 </body>
 </html>
