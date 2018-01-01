@@ -31,12 +31,7 @@ $username = $_SESSION['username'];
 
         if ($result->num_rows > 0) {
             // output data of each row
-            echo '<select class="w3-input" id="rosterInput">';
-            echo '<option value=\'[{"name":"refresh the page please"},"points":0]\' hidden selected>Select a Roster</option>';
-            while($row = $result->fetch_assoc()) {
-                echo '<option value="' . $row["roster_string"] . '">' . $row["roster_string"] . '</option>';
-            }
-            echo '</select>';
+            echo '<select class="w3-input" id="rosterInput"><option value=\'[{"name":"refresh the page please"},"points":0]\' hidden selected>Select a Roster</option></select>';
         } else {
             echo '<input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>';
         }  
@@ -77,5 +72,29 @@ $username = $_SESSION['username'];
     <br/><br/>
   </div>
   <script src="tracker.min.js"></script>
+  <script>
+    var rosterOptions = <?php
+    if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+      // Set roster options to null; the user is not logged in
+      echo 'null;';
+    } else {
+        $result = $link->query($sql);
+        if ($result->num_rows > 0) {
+            $i = 0;
+            while($row = $result->fetch_assoc()) {
+                echo '[';
+                echo '<option value="' . $row["roster_string"] . '">' . $row["roster_string"] . '</option>';
+                if ($i === 0) {
+                    echo $row["roster_string"];
+                } else {
+                    echo ',' . $row["roster_string"];
+                }
+            }
+        } else {
+            
+        }  
+    }
+?>
+  </script>
 </body>
 </html>
