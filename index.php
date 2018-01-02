@@ -43,7 +43,12 @@ $username = $_SESSION['username'];
         <p class="w3-large">When I began to watch more professional soccer, I was amazed by the intricacy of the statistics recorded. Every single player, every single team, with more stats than I could dream of. As I wondered how they did it, I ran a <a href="https://www.google.com/search?q=free+soccer+stat+recorder+online&rlz=1CAZZAC_enUS620US620&oq=free+soccer+stat+recorder+online&aqs=chrome..69i57.6605j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on" target="_blank">Google search for free soccer stat recorder online</a>. No matter how long I looked, I couldn't seem to find a good online tracker that was 100% free.</p>
       </div>
       <div class="w3-col l4 m12 w3-white w3-container">
-        <p class="w3-xlarge"></p>
+        <p class="w3-xlarge">The System is Simple</p>
+        <div class="w3-panel w3-leftbar w3-light-grey">
+          <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
+          <p>Albert Einstein</p>
+        </div>
+        <p class="w3-large">Footykeeper's was designed to be simple: no downloads required, no payments needed, and no extra steps needed. Footykeeper's system only requires three steps: registering, creating a roster, and recording.</p>
       </div>
     </div>
   </div>
