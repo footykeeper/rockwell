@@ -85,9 +85,9 @@ $username = $_SESSION['username'];
             echo '[';
             while($row = $result->fetch_assoc()) {
                 if ($i === 0) {
-                    echo $row["roster_string"];
+                    echo htmlspecialchars_decode($row["roster_string"]);
                 } else {
-                    echo ',' . $row["roster_string"];
+                    echo htmlspecialchars_decode(',' . $row["roster_string"]);
                 }
                 $i += 1;
             }
