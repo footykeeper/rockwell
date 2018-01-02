@@ -24,3 +24,5 @@ Thank you for choosing Footykeeper.
 ---
 
 Thank you to Tutorial Republic for providing a [fantastic PHP Login system](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php). We used the tutorial found [here](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php).
+
+More thanks to [JSCompress](https://jscompress.com/) for compressing our JavaScript files, resulting in a faster page load and a better experiance.
