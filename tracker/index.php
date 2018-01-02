@@ -96,6 +96,7 @@ $username = $_SESSION['username'];
             echo 'null;';
         }  
     }
+    echo '\n';
 ?>
       if (rosterOptions !== null) {
         var currentRoster = {};
