@@ -42,7 +42,7 @@ $username = $_SESSION['username'];
         <p class="w3-xlarge">It's all Free, and it's all Online</p>
         <p class="w3-large">When I began to watch more professional soccer, I was amazed by the intricacy of the statistics recorded. Every single player, every single team, with more stats than I could dream of. As I wondered how they did it, I ran a <a href="https://www.google.com/search?q=free+soccer+stat+recorder+online&rlz=1CAZZAC_enUS620US620&oq=free+soccer+stat+recorder+online&aqs=chrome..69i57.6605j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on" target="_blank">Google search for free soccer stat recorder online</a>. No matter how long I looked, I couldn't seem to find a good online tracker that was 100% free.</p>
         <div class="w3-center w3-large">
-          <div class="w3-button w3-white">Sign Up</div>
+          <a href="register.php"><div class="w3-button w3-white">Sign Up</div></a>
         </div>
       </div>
       <div class="w3-col l4 m12 w3-white w3-container" style="450px">
@@ -55,7 +55,7 @@ $username = $_SESSION['username'];
       </div>
       <div class="w3-col l4 m12 w3-blue w3-container" style="height: 450px">
         <p class="w3-xlarge">All Made in America as an Open-Source Project</p>
-        <p class="w3-large">The entire Footykeeper system has been <a href="https://github.com/footykeeper/rockwell/">saved on GitHub repository</a>, and anybody can contribute.</p>
+        <p class="w3-large">The entire Footykeeper system has been developed in America and  <a href="https://github.com/footykeeper/rockwell/">saved on an open-source GitHub repository</a>, and anybody can contribute.</p>
         <div class="w3-center w3-large">
           <p>To Download the Code or Clone the Repository</p>
           <a class="github-button" href="https://github.com/footykeeper/rockwell/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download footykeeper/rockwell on GitHub">Download</a>
