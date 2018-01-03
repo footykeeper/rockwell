@@ -36,5 +36,5 @@ $('#create').click(function () {
   $('#string').val(fin);
   setTimeout(function () {
     $('#sendRoster').click();
-  }, 500);
+  }, 50);
 });
