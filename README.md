@@ -5,7 +5,7 @@ Made to rank player's performance based on various stats. Points were derived fr
 Use the tracker [here](https://footykeeper.github.io/rockwell/tracker/), or see a brief tutorial on importing a roster [here](https://footykeeper.github.io/rockwell/media/tutorials/footykeeper-basic-tutorial.webm).
 
 ### Getting Started
-No sign-ups are required to get going, and the software is free (for now).
+No sign-ups are *required* to get going, but signing up is highly recommended because of how much easier it becomes to save your roster.
 
 To get started, go to the [roster creator](https://footykeeper.github.io/rockwell/rosters/) to create the JSON string used for roster saving. From there, it is recommended that you save the string somewhere easy to access, such as a txt file or similar format.
 
@@ -25,4 +25,4 @@ Thank you for choosing Footykeeper.
 
 Thank you to Tutorial Republic for providing a [fantastic PHP Login system](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php). We used the tutorial found [here](https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php).
 
-More thanks to [JSCompress](https://jscompress.com/) for compressing our JavaScript files, resulting in a faster page load and a better experiance.
+More thanks to [JSCompress](https://jscompress.com/) for compressing our JavaScript files, resulting in a faster page load and a better experience.
