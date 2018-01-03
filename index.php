@@ -38,11 +38,14 @@ $username = $_SESSION['username'];
   <div class="w3-white">
     <p class="w3-xlarge w3-center">Why Footykeeper?</p>
     <div class="w3-row">
-      <div class="w3-col l4 m12 w3-blue w3-container">
+      <div class="w3-col l4 m12 w3-blue w3-container" style="height: 450px">
         <p class="w3-xlarge">It's all Free, and it's all Online</p>
         <p class="w3-large">When I began to watch more professional soccer, I was amazed by the intricacy of the statistics recorded. Every single player, every single team, with more stats than I could dream of. As I wondered how they did it, I ran a <a href="https://www.google.com/search?q=free+soccer+stat+recorder+online&rlz=1CAZZAC_enUS620US620&oq=free+soccer+stat+recorder+online&aqs=chrome..69i57.6605j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on" target="_blank">Google search for free soccer stat recorder online</a>. No matter how long I looked, I couldn't seem to find a good online tracker that was 100% free.</p>
+        <div class="w3-center w3-large">
+          <div class="w3-button w3-white">Sign Up</div>
+        </div>
       </div>
-      <div class="w3-col l4 m12 w3-white w3-container">
+      <div class="w3-col l4 m12 w3-white w3-container" style="450px">
         <p class="w3-xlarge">The System is Simple</p>
         <div class="w3-panel w3-leftbar w3-light-grey">
           <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
@@ -50,8 +53,19 @@ $username = $_SESSION['username'];
         </div>
         <p class="w3-large">Footykeeper's was designed to be simple: no downloads required, no payments needed, and no extra steps needed. Footykeeper's system only requires three steps: registering, creating a roster, and recording.</p>
       </div>
+      <div class="w3-col l4 m12 w3-blue w3-container" style="height: 450px">
+        <p class="w3-xlarge">All Made in America as an Open-Source Project</p>
+        <p class="w3-large">The entire Footykeeper system has been <a href="https://github.com/footykeeper/rockwell/">saved on GitHub repository</a>, and anybody can contribute.</p>
+        <div class="w3-center w3-large">
+          <p>To Download the Code or Clone the Repository</p>
+          <a class="github-button" href="https://github.com/footykeeper/rockwell/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download footykeeper/rockwell on GitHub">Download</a>
+          <p>Open an Issue on GitHub for Support</p>
+          <a class="github-button" href="https://github.com/footykeeper/rockwell/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue footykeeper/rockwell on GitHub">Issue</a>
+        </div>
+      </div>
     </div>
   </div>
   <script src="homepage-scripts/slideshow.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
