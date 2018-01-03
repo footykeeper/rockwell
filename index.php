@@ -14,7 +14,7 @@ $username = $_SESSION['username'];
   </style>
 </head>
 <body>
-  <div class="w3-blue-gray">
+  <div class="w3-white">
     <?php
     require_once 'navigation.php';
     ?>
