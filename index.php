@@ -58,9 +58,7 @@ $username = $_SESSION['username'];
         <p class="w3-xlarge">All Made in America as an Open-Source Project</p>
         <p class="w3-large">The entire Footykeeper system has been developed in America and  <a href="https://github.com/footykeeper/rockwell/">saved on an open-source GitHub repository</a>, and anybody can contribute.</p>
         <div class="w3-center w3-large">
-          <p>To Download the Code or Clone the Repository</p>
-          <a class="github-button" href="https://github.com/footykeeper/rockwell/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download footykeeper/rockwell on GitHub">Download</a>
-          <p>Open an Issue on GitHub for Support</p>
+          <p>Open an Issue on GitHub to Receive Help or Submit a Suggestion</p>
           <a class="github-button" href="https://github.com/footykeeper/rockwell/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue footykeeper/rockwell on GitHub">Issue</a>
         </div>
       </div>
