@@ -5,6 +5,7 @@ $username = $_SESSION['username'];
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
   <title>Home // Footykeeper</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
