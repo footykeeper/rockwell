@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+    header("Location: /register.php");
+    exit();
+}
 require_once '../config.php';
 $username = $_SESSION['username'];
 ?>
